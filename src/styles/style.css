@@ -44,6 +44,7 @@ main {
 .container form > button {
     width: 152px;
     height: 38px;
+    margin-top: 9px;
 
     border: none;
     outline: none;
