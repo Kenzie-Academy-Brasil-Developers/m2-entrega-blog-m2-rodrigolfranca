@@ -182,7 +182,7 @@ h2 {
     line-height: 29px;
     color: #030000;
 }
-ul li .post-container p {
+ul li .post-container p {        
     margin: 10px 0;
     height: fit-content;
     font-size: 15px;
@@ -232,12 +232,16 @@ ul li .post-container span {
         text-align: left;
     }
     ul li .post-container p {
+        word-break: break-all;
         min-height: 70px;
+        max-width: 550px;
+        height:fit-content;
+        text-overflow: ellipsis;
     }
     ul li .post-container span {
-        position: relative;
-        float: right;
-        bottom: -20px;                
+        display: block;
+        text-align: end;
+        width: 550px;
     }
     .mobile {
         display: none;

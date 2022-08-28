@@ -5,7 +5,7 @@ class indexPage{
     static async renderPage(){
 
         const token = localStorage.getItem("@kenzieBlog:token") || "";
-        if (token) window.location.assign("src/pages/homePage");
+        if (token) window.location.assign("src/pages/homePage.html");
 
         const email = document.getElementById("email");
         const password = document.getElementById("password");
@@ -20,7 +20,7 @@ class indexPage{
             }
 
             Req.postLogin(body);
-            if (token) window.location.assign("src/pages/homePage");
+            if (token) window.location.assign("src/pages/homePage.html");
 
         })
 
