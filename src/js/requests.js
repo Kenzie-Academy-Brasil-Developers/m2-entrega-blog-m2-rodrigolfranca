@@ -101,7 +101,7 @@ export class Req {
         const options = {
             method: "POST",
             headers: this.headers,
-            body: data
+            body: JSON.stringify(data)
         }
         const posts = await fetch(`${this.baseUrl}/posts`, options)
         .then(res => res.json())
