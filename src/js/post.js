@@ -4,9 +4,9 @@ import { HomePage } from "./homePage.js";
 class Post {
   static postText() {
     const newPost = document.getElementById("newPost");
-    const PostBtn = document.querySelectorAll("postButton");
+    const PostBtn = document.querySelectorAll(".postButton");
 
-    PostBtn.forEach(() => {
+    PostBtn.forEach(PostBtn => {
       PostBtn.addEventListener("click", async (event) => {
         event.preventDefault();
 
