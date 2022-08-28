@@ -77,4 +77,23 @@ export class Req {
 
     }
 
+    static async patchPost(body){
+
+        const options = {
+            method: "PATCH",
+            headers: this.headers,
+            body: JSON.stringify(body)
+        }
+
+        const id = localStorage.getItem("@kenzieBlog:item")
+
+        const patched = await fetch(`${this.baseUrl}/posts/${id}`, options)
+        .then(res => res.json())
+        .then(res => res)
+        .catch(error => console.log(error))
+
+        return patched
+
+    }
+
 }

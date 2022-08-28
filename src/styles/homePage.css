@@ -197,11 +197,72 @@ ul li .post-container span {
     font-size: 15px;
     line-height: 18px;
     color: var(--purple);
+}   
+
+.modal {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #03000080;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
+.modal > form {
+    height: fit-content;
+    width: 90%;
+    min-width: 285px;
+    max-width: 430px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0 40px;
+}
+.modal-title {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 42px;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px black;  
+}
+.modal > form > textarea {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    height: 150px;
+    padding: 10px;
+
+    resize:none;
+    outline: none;
+    border: none;
+    background-color: var(--white);
+    color: var(--darkpurple);
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 10px;
+}
+.modal > form > button {
+    width: 128px;
+    height: 38px;
+    border: none;
+    outline: none;
+    background: var(--darkpurple);
+    border-radius: 20px;
+
+    font-weight: 700;
+    font-size: 16px;
+
+    color: var(--white);
+}
+
+
 .hidden {
     display: none;
 }
-
 @media (min-width: 768px) {    
     .desktop {
         display: block;
