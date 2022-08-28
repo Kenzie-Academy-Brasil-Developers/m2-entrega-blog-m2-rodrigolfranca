@@ -1,3 +1,4 @@
+import { Modal } from "./editModal.js";
 import { Req } from "./requests.js";
 
 export class HomePage {
@@ -14,11 +15,13 @@ export class HomePage {
         userPic.src = user.avatarUrl;
         const userName = document.getElementById("userName");
         userName.innerText = user.username;
+        const ul = document.querySelector("ul")
+        ul.innerHTML = ""
 
         const posts = await Req.getPosts();
         posts.forEach(element => {
             const li = this.makeCard(element);
-            document.querySelector("ul").appendChild(li);
+            ul.appendChild(li);
         });
 
         const logout = document.getElementById("logout");
@@ -97,4 +100,6 @@ export class HomePage {
     }
 }
 
-HomePage.renderPage()
+await HomePage.renderPage();
+Modal.showModal();
+Modal.editPost();
