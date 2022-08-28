@@ -2,6 +2,7 @@ export class Req {
 
     static baseUrl = "https://blog-m2.herokuapp.com"
     static token = localStorage.getItem("@kenzieBlog:token") || ""
+    static userId = localStorage.getItem("@kenzieBlog:userId") || ""
     static headers = {
         "Content-Type":"application/json",
         "Authorization": `Bearer ${this.token}`
@@ -43,6 +44,37 @@ export class Req {
         .catch(err => console.log(err))
         
         return newUser
+    }
+
+    static async getUser() {
+
+        const options = {
+            method : "GET",
+            headers : this.headers
+        }        
+
+        const user = await fetch(`${this.baseUrl}/users/${this.userId}`, options)
+        .then(res => res.json())
+        .then(res => res)
+
+        return user
+
+    }
+
+    static async getPosts(){
+
+        const options = {
+            method: "GET",
+            headers: this.headers
+        }
+
+        const posts = await fetch(`${this.baseUrl}/posts?page=1`, options)
+        .then(res => res.json())
+        .then(res => res.data)
+        .catch(error => console.log(error))
+
+        return posts
+
     }
 
 }
