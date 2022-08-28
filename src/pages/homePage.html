@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/homePage.css">
+    <title>Kenzie Blog - Home Page</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="user">
+                <figure>
+                    <img id=userPic src="../assets/user-demo.png" alt="Nome do Usuário">
+                </figure>
+                <h1 id="userName">Nome do Usuário</h1>
+            </div>
+            <button id="logout">Logout</button>
+        </div>
+    </header>
+    <main>
+        <section id="sectionPost">
+            <form>
+                <textarea name="newPost" id="newPost" placeholder="No que está pensando?"></textarea>
+                <button class="desktop postButton">Postar</button>
+                <button class="mobile postButton">+</button>
+            </form>            
+        </section>
+        <section id="sectionTimeline">
+            <ul>
+                <!--
+                    Template de li para posts
+                    
+                    <li>
+                    <div>
+                        <figure>
+                            <img src="../assets/user-demo.png" alt="Nome do Usuário">
+                        </figure>
+                        <h2 class="mobile">Usuário</h2>
+                        <div class="button-container desktop">
+                            <button class="editButton"></button>
+                            <button class="deleteButton"></button>
+                        </div>
+                    </div>
+                    <div class="post-container">
+                        <h2 class=desktop>Usuário</h2>
+                        <p>Post Text - Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p>
+                        <span>22/08/2022</span>
+                        <div class="button-container mobile">
+                            <button class="editButton"></button>
+                            <button class="deleteButton"></button>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>       
+
+    </main>
+    
+    </section>
+        <section class = "section-tog hidden">
+            <div class="deleteBox">
+                <p>Deseja Deletar esse poster?</p>
+                <button class="deleteBtn">Delete</button>
+            </div>
+        </section>
+    </section>   
+
+    <section id=modal class="modal hidden">
+        <form>
+            <h2 class="modal-title">Editar</h2>
+            <textarea name="edited-content" id="edited-content" placeholder="Estou mudando meu comentário"></textarea>
+            <button type="submit" class="modal-edit-button">Enviar</button>          
+        </form>
+    </section>
+    
+    <script src="../js/homePage.js" type="module"></script>
+    <script src="../js/post.js" type="module"></script>
+</body>
+</html>

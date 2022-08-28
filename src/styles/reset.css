@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html, body, section, main, figure, aside, footer, header, h1, h2, h3, th, td, tr, tbody, thead, ul, ol, li, p {
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+	box-sizing: border-box;
+}
+
+:root {
+	--purple: #454D6B;
+	--lightblue: #6495EDBF;
+    --blue: #6495ED;
+    --white: #ECF0F1;
+    --black: #030000;
+    --darkpurple: #5C5D8D;
+}
