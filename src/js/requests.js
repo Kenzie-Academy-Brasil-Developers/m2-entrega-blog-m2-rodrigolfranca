@@ -27,4 +27,22 @@ export class Req {
 
     }
 
+    static async createUser(data){
+
+        const options = {
+            method: "POST",            
+            headers: this.headers,
+            body: JSON.stringify(data)
+        }
+
+        const newUser = await fetch(`${this.baseUrl}/users/register`, options)
+        .then(res => {
+            return (res.status === 200)? res.json() : {message: "Create user failed"}
+        })
+        .then(res => res)
+        .catch(err => console.log(err))
+        
+        return newUser
+    }
+
 }

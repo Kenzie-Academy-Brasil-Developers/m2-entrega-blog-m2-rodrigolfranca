@@ -4,12 +4,12 @@ class indexPage{
 
     static async renderPage(){
 
-        const token = localStorage.getItem("@kenzieBlog:token");
+        const token = localStorage.getItem("@kenzieBlog:token") || "";
         if (token) window.location.assign("src/pages/homePage");
 
         const email = document.getElementById("email");
         const password = document.getElementById("password");
-        const submit = document.querySelector("button");
+        const submit = document.getElementById("loginBtn");
 
         submit.addEventListener("click", event => {
             event.preventDefault();
