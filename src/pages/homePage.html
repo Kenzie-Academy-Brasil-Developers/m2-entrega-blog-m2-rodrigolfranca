@@ -54,17 +54,27 @@
                         </div>
                     </div>
                 </li> -->
-            </ul>
-        </section>
+            </ul>       
+
+    </main>
+    
+    </section>
         <section class = "section-tog hidden">
             <div class="deleteBox">
                 <p>Deseja Deletar esse poster?</p>
                 <button class="deleteBtn">Delete</button>
             </div>
         </section>
-    </main>
-    
+    </section>   
 
+    <section id=modal class="modal hidden">
+        <form>
+            <h2 class="modal-title">Editar</h2>
+            <textarea name="edited-content" id="edited-content" placeholder="Estou mudando meu comentário"></textarea>
+            <button type="submit" class="modal-edit-button">Enviar</button>          
+        </form>
+    </section>
+    
     <script src="../js/homePage.js" type="module"></script>
   <script src="../js/post.js" type="module"></script>
 </body>

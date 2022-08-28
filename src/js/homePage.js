@@ -1,25 +1,34 @@
+import { Modal } from "./editModal.js";
 import { Req } from "./requests.js";
 
-class HomePage {
-    static userId = localStorage.getItem("@kenzieBlog:userId") || "";
-    static token = localStorage.getItem("@kenzieBlog:token") || "";
+export class HomePage {
+    static userId = localStorage.getItem("@kenzieBlog:userId");
+    static token = localStorage.getItem("@kenzieBlog:token");
 
     static async renderPage(){
 
-        if (!this.token) window.location.assign("../../index.html");        
+        if (!this.token) window.location.assign("../../index.html");
 
         const user = await Req.getUser(this.userId);
-        console.log(user)
 
         const userPic = document.getElementById("userPic");
         userPic.src = user.avatarUrl;
         const userName = document.getElementById("userName");
-        userName.innerText = user.username
+        userName.innerText = user.username;
+        const ul = document.querySelector("ul")
+        ul.innerHTML = ""
 
-        const posts = await Req.getPosts()
+        const posts = await Req.getPosts();
         posts.forEach(element => {
-            const li = this.makeCard(element)
-            document.querySelector("ul").appendChild(li)
+            const li = this.makeCard(element);
+            ul.appendChild(li);
+        });
+
+        const logout = document.getElementById("logout");
+        logout.addEventListener("click", () => {
+            localStorage.removeItem("@kenzieBlog:token");
+            localStorage.removeItem("@kenzieBlog:userId");
+            window.location.assign("../../index.html");
         });
 
     }
@@ -63,9 +72,14 @@ class HomePage {
         const buttonContainerMobile = document.createElement("div")
         buttonContainerMobile.classList.add("button-container", "mobile");
         const editButtonMobile = document.createElement("button");
-        editButton.classList.add("editButton");
+        editButton.classList.add("editButton", "editModal");
         const deleteButtonMobile = document.createElement("button");
         deleteButton.classList.add("deleteButton");
+        
+        editButtonMobile.value = obj.id;
+        deleteButtonMobile.value = obj.id;
+        editButton.value = obj.id;
+        editButton.value = obj.id;
 
         postContainer.appendChild(h2Desktop);
         postContainer.appendChild(p)
@@ -86,4 +100,6 @@ class HomePage {
     }
 }
 
-HomePage.renderPage()
+await HomePage.renderPage();
+Modal.showModal();
+Modal.editPost();
