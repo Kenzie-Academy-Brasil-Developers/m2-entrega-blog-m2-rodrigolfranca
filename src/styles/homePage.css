@@ -1,0 +1,245 @@
+button {
+    cursor: pointer
+}
+.editButton {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    outline: none;    
+
+    background-image: url("../assets/edit.svg");
+    background-size: cover;
+    background-position: center;    
+
+    border-radius: 50%;
+}
+.deleteButton {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    outline: none;    
+
+    background-image: url("../assets/trash.svg");
+    background-size: cover;
+    background-position: center;    
+
+    border-radius: 50%;
+}
+
+.desktop {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--blue);
+}
+
+.container {    
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .user {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 10px;
+}
+.container .user > figure {
+    width: 66px;
+    height: 66px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .user > figure img {
+    width: 100%;
+    height: 100%;
+}
+.container .user > h1 {
+    width: calc(100% - 77px);
+    height: 22px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFFFFF;    
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px var(--black);
+}
+.container > button {
+    width: 128px;
+    height: 38px;
+    border: none;
+    outline: none;
+    background: var(--darkpurple);
+    border-radius: 20px;
+
+    font-weight: 700;
+    font-size: 16px;
+
+    color: var(--white);
+}
+
+main {
+    width: 100%;
+    background-color: var(--purple);
+    padding: 40px 0 10px;
+    min-height: 100vh;
+}
+
+#sectionPost {
+    width: 90%;
+    height: 100px;
+    margin: 0 auto 100px;
+}
+#sectionPost form {
+    width: 95%;
+    height: 100%;    
+}
+#sectionPost form > textarea {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 15px 10px;
+
+    resize: none;
+
+    outline: none;
+    border:none;
+
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #363457;
+}
+#sectionPost form > button {
+    position: relative;
+    float: right;
+    bottom: 40px;
+    right: 15px;
+    padding-bottom: 3px;
+
+    outline: none;
+    border:none;
+
+    padding: 3px 20px;
+
+    background: var(--darkpurple);
+    border-radius: 20px;
+
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--white);
+
+    }
+
+#sectionTimeline {
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul {
+    width: 100%;    
+}
+ul li {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    padding: 15px 20px 3px;
+    margin: 50px 0;
+    text-align: center;
+    border-radius: 20px;
+}
+figure {
+    width: 66px;
+    height: 66px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+figure > img {
+    width: 100%;
+    height: 100%;
+}
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #030000;
+}
+ul li .post-container p {
+    margin: 10px 0;
+    height: fit-content;
+    font-size: 15px;
+    line-height: 19px;
+    color: var(--purple);
+    text-align: left;
+}
+ul li .post-container span {
+    display: block;
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--purple);
+}
+.hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {    
+    .desktop {
+        display: block;
+    }
+    #sectionPost, #sectionTimeline {
+        width: 768px;
+    }
+    #sectionPost form {
+        width: 97%
+    }
+    ul li {
+        display: flex;        
+    }
+    li div {
+        padding: 20px;
+    }
+    .button-container {
+        margin-top: 15px;
+        padding: 0;        
+        display: flex;
+        justify-content: space-between;        
+    }
+    figure {
+        width: 115px;
+        height: 115px;
+    }
+    li .post-container{
+        text-align: left;
+    }
+    ul li .post-container p {
+        min-height: 70px;
+    }
+    ul li .post-container span {
+        position: relative;
+        float: right;
+        bottom: -20px;                
+    }
+    .mobile {
+        display: none;
+    }
+}

@@ -16,4 +16,8 @@ html, body, section, main, figure, aside, footer, header, h1, h2, h3, th, td, tr
 :root {
 	--purple: #454D6B;
 	--lightblue: #6495EDBF;
+    --blue: #6495ED;
+    --white: #ECF0F1;
+    --black: #030000;
+    --darkpurple: #5C5D8D;
 }
