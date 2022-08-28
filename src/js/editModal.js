@@ -12,7 +12,7 @@ export class Modal {
             button.addEventListener("click", (event) => {
 
                 localStorage.setItem("@kenzieBlog:item", event.target.value)
-                modal.classList.toggle("hidden");
+                modal.classList.remove("hidden");
 
             });
 
@@ -26,14 +26,21 @@ export class Modal {
         modalEditButton.addEventListener("click", async (e) => {
             e.preventDefault();
             const modal = document.querySelector('.modal')
+            const textarea = document.getElementById("edited-content")
+
+            const content = textarea.value
 
             const body = {
-                content: document.getElementById("edited-content").value
+                content: content
             }
+
+            textarea.value = ""
             
             await Req.patchPost(body)
+            modal.classList.add("hidden");
             await HomePage.renderPage();
-            modal.classList.toggle("hidden");            
+            Modal.showModal();
+            Modal.editPost();
 
         });        
 

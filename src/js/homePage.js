@@ -29,7 +29,7 @@ export class HomePage {
             localStorage.removeItem("@kenzieBlog:token");
             localStorage.removeItem("@kenzieBlog:userId");
             window.location.assign("../../index.html");
-        });
+        });        
 
     }
 

@@ -19,6 +19,9 @@ class indexPage{
                 password: password.value
             }
 
+            email.value = "";
+            password.value = "";
+
             await Req.postLogin(body);
             window.location.assign("src/pages/homePage.html");
 
