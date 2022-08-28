@@ -1,5 +1,6 @@
 import { Req } from "./requests.js";
 import { HomePage } from "./homePage.js";
+import { Modal } from "./editModal.js";
 
 class Post {
   static postText() {
@@ -15,7 +16,7 @@ class Post {
         };
 
         const user = await Req.postPosts(data);
-        HomePage.renderPage();
+        await HomePage.renderPage();        
       });
     });
   }

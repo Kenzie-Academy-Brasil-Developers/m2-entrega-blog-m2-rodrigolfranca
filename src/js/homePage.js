@@ -31,6 +31,9 @@ export class HomePage {
             window.location.assign("../../index.html");
         });
 
+        Modal.showModal();
+        Modal.editPost();
+
     }
 
     static makeCard(obj) {
@@ -101,5 +104,3 @@ export class HomePage {
 }
 
 await HomePage.renderPage();
-Modal.showModal();
-Modal.editPost();
