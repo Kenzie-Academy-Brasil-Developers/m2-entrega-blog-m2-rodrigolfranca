@@ -5,12 +5,12 @@ class Register{
     static registerUser(){
 
         const username = document.getElementById("username");
-        const email = document.getElementById("email");
+        const email = document.getElementById("emailRegister");
         const avatarUrl = document.getElementById("avatar");
-        const password = document.getElementById("password");
+        const password = document.getElementById("passwordRegister");
         const submit = document.getElementById("registerBtn");
 
-        submit.addEventListener("click", (event) => {
+        submit.addEventListener("click", async event => {
             event.preventDefault();
 
             const data = {
@@ -20,7 +20,7 @@ class Register{
                 password: password.value
             }
 
-            Req.createUser(data)
+            const user = await Req.createUser(data);
         })
 
     }

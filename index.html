@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/styles/reset.css">
-  <link rel="stylesheet" href="./src/styles/style.css">
-  <title>m2-entrega-blog-m2</title>
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <link rel="stylesheet" href="./src/styles/register.css">
+  <title>Kenzie Blog - Login</title>
 </head>
 <body>
   <main>
@@ -15,9 +16,9 @@
       <h2>Cadastro</h2>
       <form>
         <input type="text" name="username" id="username" placeholder="Nome do usuário">
-        <input type="text" name="email" id="emailInput" placeholder="Email">
+        <input type="text" name="emailRegister" id="emailRegister" placeholder="Email">
         <input type= "text" name="avatar" id="avatar" placeholder="Foto de Perfil">
-        <input type="password" name="password" id="passwordInput" placeholder="Senha">
+        <input type="password" name="passwordRegister" id="passwordRegister" placeholder="Senha">
         <button id="registerBtn">Cadastrar</button>
       </form>
     </div>
@@ -28,11 +29,12 @@
       <form>
         <input type="text" name="email" id="email" placeholder="Email">
         <input type="password" name="password" id="password" placeholder="Senha">
-        <button>Entrar</button>
+        <button id="loginBtn">Entrar</button>
       </form>
     </div>
 
   </main>
   <script src="./src/js/index.js" type="module"></script>
+  <script src="./src/js/register.js" type="module"></script>
 </body>
 </html>
