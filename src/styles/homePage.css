@@ -96,7 +96,7 @@ main {
     width: 100%;
     background-color: var(--purple);
     padding: 40px 0 10px;
-
+    min-height: 100vh;
 }
 
 #sectionPost {
