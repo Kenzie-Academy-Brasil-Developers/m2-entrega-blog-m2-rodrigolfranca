@@ -27,4 +27,20 @@ export class Req {
 
     }
 
+    static async createUser(data){
+
+        const options = {
+            method: "POST",            
+            headers: this.headers,
+            body: JSON.stringify(data)
+        }
+
+        const newUser = await fetch(`${this.baseUrl}/users/register`, options)
+        .then(res => res.json())
+        .then(res => res)
+        .catch(err => console.log(err))
+        
+        return newUser
+    }
+
 }
