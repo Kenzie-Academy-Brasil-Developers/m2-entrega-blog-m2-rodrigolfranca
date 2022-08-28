@@ -15,8 +15,12 @@ class Post {
           content: newPost.value,
         };
 
+        newPost.value = "";
+
         const user = await Req.postPosts(data);
-        await HomePage.renderPage();        
+        await HomePage.renderPage();
+        Modal.showModal();
+        Modal.editPost();        
       });
     });
   }

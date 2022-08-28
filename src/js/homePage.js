@@ -29,10 +29,7 @@ export class HomePage {
             localStorage.removeItem("@kenzieBlog:token");
             localStorage.removeItem("@kenzieBlog:userId");
             window.location.assign("../../index.html");
-        });
-
-        Modal.showModal();
-        Modal.editPost();
+        });        
 
     }
 
@@ -104,3 +101,5 @@ export class HomePage {
 }
 
 await HomePage.renderPage();
+Modal.showModal();
+Modal.editPost();

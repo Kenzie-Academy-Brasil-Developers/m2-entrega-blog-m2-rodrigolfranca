@@ -20,6 +20,11 @@ class Register{
                 password: password.value
             }
 
+            username.value = "";
+            email.value = "";
+            avatarUrl.value = "";
+            password.value = "";
+            
             const user = await Req.createUser(data);
         })
 
