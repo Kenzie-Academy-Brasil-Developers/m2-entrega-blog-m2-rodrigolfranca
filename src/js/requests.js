@@ -77,4 +77,24 @@ export class Req {
 
     }
 
+    static async postPosts(data){
+
+        const options = {
+            method: "POST",
+            headers: this.headers,
+            body: data
+        }
+        const posts = await fetch(`${this.baseUrl}/posts`, options)
+        .then(res => res.json())
+        .then(res => res.data)
+        .catch(error => console.log(error))
+
+        return posts
+}
+    static async deletePosts(){
+        const option = {
+            method: "DELETE",
+            headers: this.headers,
+        }
+    }
 }
