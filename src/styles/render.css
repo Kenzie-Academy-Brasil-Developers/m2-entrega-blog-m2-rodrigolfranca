@@ -1,0 +1,46 @@
+.section-tog {
+    width: auto;
+    height: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.deleteBox {
+  width: 381px;
+  height: 176px;
+  left: 20px;
+  top: 430px;
+  background: #6495ed;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+.deleteBtn {
+  width: 152px;
+  height: 38px;
+  left: 131px;
+  top: 543px;
+  background: #ff3f5b;
+  border-radius: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 900px){
+    .deleteBox {
+        width: 430px; 
+        left: 541px;
+      }
+      .deleteBtn {
+        left: 680px;
+        top: 516px;
+      }
+}
