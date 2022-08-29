@@ -1,5 +1,6 @@
 import { Modal } from "./editModal.js";
 import { Req } from "./requests.js";
+import { dltModal } from "./deleteModal.js";
 
 export class HomePage {
     static userId = localStorage.getItem("@kenzieBlog:userId");
@@ -49,7 +50,7 @@ export class HomePage {
         const buttonContainerDesktop = document.createElement("div");
         buttonContainerDesktop.classList.add("button-container", "desktop");
         const editButton = document.createElement("button");
-        editButton.classList.add("editButton");
+        editButton.classList.add("editButton", "editModal");
         const deleteButton = document.createElement("button");
         deleteButton.classList.add("deleteButton");
 
@@ -72,14 +73,15 @@ export class HomePage {
         const buttonContainerMobile = document.createElement("div")
         buttonContainerMobile.classList.add("button-container", "mobile");
         const editButtonMobile = document.createElement("button");
-        editButton.classList.add("editButton", "editModal");
+        editButtonMobile.classList.add("editButton", "editModal");
         const deleteButtonMobile = document.createElement("button");
-        deleteButton.classList.add("deleteButton");
+        deleteButtonMobile.classList.add("deleteButton");
+       
         
         editButtonMobile.value = obj.id;
         deleteButtonMobile.value = obj.id;
         editButton.value = obj.id;
-        editButton.value = obj.id;
+        deleteButton.value = obj.id;
 
         postContainer.appendChild(h2Desktop);
         postContainer.appendChild(p)
@@ -103,3 +105,5 @@ export class HomePage {
 await HomePage.renderPage();
 Modal.showModal();
 Modal.editPost();
+dltModal.showdltModal();
+dltModal.dltPost();

@@ -111,10 +111,17 @@ export class Req {
         return posts
 }
     static async deletePosts(){
-        const option = {
+        const options = {
             method: "DELETE",
             headers: this.headers,
+            
         }
+        const id = localStorage.getItem("@kenzieBlog:item")
+        const post = await fetch(`${this.baseUrl}/posts/${id}`, options)
+        .then(res => res.json())
+        .then(res => res.data)
+        .catch(error => console.log(error))
+
+        return post
     }
-    
 }
