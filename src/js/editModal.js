@@ -1,5 +1,6 @@
 import { Req } from "./requests.js";
 import { HomePage } from "./homePage.js";
+import { dltModal } from "./deleteModal.js";
 
 export class Modal {
     static showModal(){
@@ -40,6 +41,8 @@ export class Modal {
             await HomePage.renderPage();
             Modal.showModal();
             Modal.editPost();
+            dltModal.showdltModal();
+            dltModal.dltPost();
             modal.classList.add("hidden");
         });        
 

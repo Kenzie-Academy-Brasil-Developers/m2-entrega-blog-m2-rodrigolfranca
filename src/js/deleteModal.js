@@ -8,13 +8,15 @@ export class dltModal {
         const delBtn = document.querySelectorAll(".deleteButton");
         const modal = document.querySelector(".section-tog");
         
-        delBtn.forEach( e =>
-            e.addEventListener("click", (e) => { 
-                console.log(modal)
+        delBtn.forEach( e => {
+
+            e.addEventListener("click", (e) => {
                 localStorage.setItem("@kenzieBlog:item", e.target.value)  
                 modal.classList.remove("hidden");
-            }))
-        }
+            })
+
+        })
+    }
 
     static dltPost(){
         const modal = document.querySelector(".section-tog");
