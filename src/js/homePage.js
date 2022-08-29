@@ -50,7 +50,7 @@ export class HomePage {
         const buttonContainerDesktop = document.createElement("div");
         buttonContainerDesktop.classList.add("button-container", "desktop");
         const editButton = document.createElement("button");
-        editButton.classList.add("editButton");
+        editButton.classList.add("editButton", "editModal");
         const deleteButton = document.createElement("button");
         deleteButton.classList.add("deleteButton");
 
