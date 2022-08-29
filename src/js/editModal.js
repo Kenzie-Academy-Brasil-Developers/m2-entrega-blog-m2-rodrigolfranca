@@ -37,11 +37,10 @@ export class Modal {
             textarea.value = ""
             
             await Req.patchPost(body)
-            modal.classList.add("hidden");
             await HomePage.renderPage();
             Modal.showModal();
             Modal.editPost();
-
+            modal.classList.add("hidden");
         });        
 
     }    

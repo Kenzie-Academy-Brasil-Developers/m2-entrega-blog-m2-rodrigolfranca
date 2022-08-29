@@ -1,6 +1,7 @@
 import { Req } from "./requests.js";
 import { HomePage } from "./homePage.js";
 import { Modal } from "./editModal.js";
+import {dltModal} from "./deleteModal.js"
 
 class Post {
   static postText() {
@@ -20,7 +21,9 @@ class Post {
         const user = await Req.postPosts(data);
         await HomePage.renderPage();
         Modal.showModal();
-        Modal.editPost();        
+        Modal.editPost();     
+        dltModal.showdltModal();
+        dltModal.dltPost();   
       });
     });
   }
