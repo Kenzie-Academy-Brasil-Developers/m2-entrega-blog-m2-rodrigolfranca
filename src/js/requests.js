@@ -21,8 +21,8 @@ export class Req {
         .then(res => res)
         .catch(err => console.log(err))
         
-        localStorage.setItem("@kenzieBlog:token", response.token)
-        localStorage.setItem("@kenzieBlog:userId", response.userId)
+        if (response.token) localStorage.setItem("@kenzieBlog:token", response.token)
+        if (response.token) localStorage.setItem("@kenzieBlog:userId", response.userId)
 
         return response
 
