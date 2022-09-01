@@ -22,8 +22,8 @@ class indexPage{
             email.value = "";
             password.value = "";
 
-            await Req.postLogin(body);
-            window.location.assign("src/pages/homePage.html");
+            const response = await Req.postLogin(body);            
+            if (response.token) window.location.replace("src/pages/homePage.html");
 
         })
 
